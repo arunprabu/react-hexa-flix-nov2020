@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/shared/Header';
+import Footer from './components/shared/Footer';
 
+// App Component -- Ideal place for you to have the layout
+// Functional Component -with named fn
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+
+      <div className="mt-5">
+        <h1 className='red'>Success!!!!!!</h1>
+      </div>
+
+      <Footer></Footer>
     </div>
   );
 }
