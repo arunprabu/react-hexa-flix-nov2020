@@ -4,9 +4,10 @@ import React from 'react';
 import Menu from './Menu';
 
 // Comp with Anonymous Fn
-const Footer = function(){
+const Footer = function(props){
+  console.log(props);
+
   // variables can be added inside
-  let year = 2020;
   const devName = 'Arun';
 
   // inline styles 
@@ -28,9 +29,9 @@ const Footer = function(){
     <div>
       <hr />
       <Menu />
-      <p style={footerStyles.copyrightStyle}>Copyright {year} | {devName}</p>
+      <p style={footerStyles.copyrightStyle}>Copyright {props.year} | {devName}</p>
       <p style={footerStyles.happyStyle}>Happily developed in a training in &nbsp;
-        <span style={{fontWeight: 'bold'}}>November 2020</span>!
+        <span style={{fontWeight: 'bold'}}>November {props.year}</span>!
       </p>
       
     </div>
