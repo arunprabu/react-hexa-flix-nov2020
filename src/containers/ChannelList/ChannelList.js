@@ -5,7 +5,11 @@ import Channel from '../../components/Channel/Channel';
 // class comp can have states
 class ChannelList extends Component {
 
-  // data within the comp 
+  // data within the comp in state
+  // changing the state will result in re-rendering of the comp
+  // merge with the unchanged existing properties
+  // it will call the render() method again.
+  
   state = {
     tvChannelList: [
       { name: 'Star Sports', info: '#1 Sport Channel'},
@@ -16,9 +20,6 @@ class ChannelList extends Component {
   }
 
   addToFavHandler = () => {
-    // changing the state will result in re-rendering of the comp
-    // merge with the unchanged existing properties
-    // it will call the render() method again.
     // changing the state is okay in a simple react app.
     // but not in a bigger enterprise app.
     // changing the state will result in unwanted behaviours in the child comp tree
