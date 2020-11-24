@@ -4,7 +4,6 @@ import React from 'react'
 // 16.3+ - Fn components can have states using React Hooks
 const Channel = ( props ) => {
 
-  console.log(props.addToFav);
   return (
     <div className='col-md-3'>
       <div className="card">

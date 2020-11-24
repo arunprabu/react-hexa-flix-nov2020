@@ -4,6 +4,9 @@ import Footer from './components/shared/Footer';
 import ProgramList from './containers/ProgramList/ProgramList';
 import ChannelList from './containers/ChannelList/ChannelList';
 import TrendingShows from './containers/TrendingShows/TrendingShows';
+import MyProfile from './containers/MyProfile/MyProfile';
+import Subscription from './components/Subscription/Subscription';
+import LifeCycleDemo from './containers/LifeCycleDemo/LifeCycleDemo';
 
 // App Component -- Ideal place for you to have the layout
 // Functional Component -with named fn
@@ -21,6 +24,12 @@ function App() {
         <ChannelList />
         <hr />
         <TrendingShows />
+        <hr />
+        <MyProfile />
+        <hr />
+        <Subscription endsOn='26/Nov/2020' />
+        <hr />
+        <LifeCycleDemo />
       </div>
 
       <Footer year='2020'></Footer>
