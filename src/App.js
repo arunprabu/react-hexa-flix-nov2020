@@ -7,6 +7,7 @@ import TrendingShows from './containers/TrendingShows/TrendingShows';
 import MyProfile from './containers/MyProfile/MyProfile';
 import Subscription from './components/Subscription/Subscription';
 import LifeCycleDemo from './containers/LifeCycleDemo/LifeCycleDemo';
+import ContactForm from './containers/ContactForm/ContactForm';
 
 // App Component -- Ideal place for you to have the layout
 // Functional Component -with named fn
@@ -30,6 +31,8 @@ function App() {
         <Subscription endsOn='26/Nov/2020' />
         <hr />
         <LifeCycleDemo />
+        <hr />
+        <ContactForm />
       </div>
 
       <Footer year='2020'></Footer>
