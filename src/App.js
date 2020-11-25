@@ -8,6 +8,7 @@ import MyProfile from './containers/MyProfile/MyProfile';
 import Subscription from './components/Subscription/Subscription';
 import LifeCycleDemo from './containers/LifeCycleDemo/LifeCycleDemo';
 import ContactForm from './containers/ContactForm/ContactForm';
+import WithLastLogin from './hoc/WithLastLogin';
 
 // App Component -- Ideal place for you to have the layout
 // Functional Component -with named fn
@@ -33,6 +34,12 @@ function App() {
         <LifeCycleDemo />
         <hr />
         <ContactForm />
+        <hr/>
+        <WithLastLogin>Last login was: 24th Nov 2020 - 3PM </WithLastLogin>
+        <WithLastLogin>
+          <div>test 1</div>
+          <div>test 2</div>
+        </WithLastLogin>
       </div>
 
       <Footer year='2020'></Footer>

@@ -11,7 +11,9 @@ import reportWebVitals from './reportWebVitals';
 // ReactDOM will render the App Component inside the div with id root. 
 // Consuming the App comp as an element
 ReactDOM.render(
+  <React.StrictMode>
     <App />
+  </React.StrictMode>
   ,
   document.getElementById('root')
 );

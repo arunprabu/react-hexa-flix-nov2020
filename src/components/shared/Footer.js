@@ -11,14 +11,19 @@ const Footer = function(props){
   const devName = 'Arun';
 
   return(
-    <div>
-      <hr />
-      <Menu />
-      <p>Copyright {props.year} | {devName}</p>
-      <p>Happily developed in a training in &nbsp;
-        <span style={{fontWeight: 'bold'}}>November {props.year}</span>!
-      </p>
-    </div>
+    <React.Fragment>
+      <div>
+        <hr />
+        <Menu />
+        <p>Copyright {props.year} | {devName}</p>
+        <p>Happily developed in a training in &nbsp;
+          <span style={{fontWeight: 'bold'}}>November {props.year}</span>!
+        </p>
+      </div>
+      <div>
+        test
+      </div>
+    </React.Fragment>
   )
 }
 

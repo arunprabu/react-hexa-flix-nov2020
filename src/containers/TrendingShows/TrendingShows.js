@@ -36,7 +36,7 @@ class TrendingShows extends Component {
     let shows = null; 
 
     if( this.state.showsList && this.state.showsList.length > 0) {
-      // looping thru with map to extract array elements
+      // looping thru with map to extract array elements -- map is from es2015
       shows = this.state.showsList.map( (show, index) => {
         return(
           <li className='list-group-item' key={`show${show.id}`}>

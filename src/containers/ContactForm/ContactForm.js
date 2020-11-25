@@ -1,6 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import axios from 'axios';
 
 class ContactForm extends Component {
+
+  state = {
+    isSaved: false
+  }
 
   contactFormSubmitHandler = (e) =>{
     e.preventDefault();
@@ -10,8 +15,27 @@ class ContactForm extends Component {
     const contactData = {
       email: this.emailInput.value,
       phone: this.phoneInput.value
-    }
-    // let's submit to the rest api tomorrow
+    } 
+
+    // What's the REST API? https://jsonplaceholder.typicode.com/users
+    // What's the REST API Client tool? Axios - npm i axios or 
+      // else JS's native fetch web api client (es2017)
+    // What HTTP Method? - POST
+    axios.post('https://jsonplaceholder.typicode.com/users', contactData)
+      .then( (response) => {
+        console.log(response);
+        if(response && response.status == 201){
+          this.setState({
+            isSaved: true
+          });
+        }
+      })
+      .catch( (error) => {
+        console.log(error);
+      })
+      .finally( () => {
+        console.log('It is over!');
+      });
   }
 
   render() {
@@ -38,6 +62,13 @@ class ContactForm extends Component {
             />
           </div>
           <button type="submit" className="btn btn-primary">Submit</button>
+          {
+             this.state.isSaved?  
+             <div className="alert alert-success">Saved Successfully!</div>
+             : 
+             <div className="alert alert-danger">Some Error! Try again later!</div>
+          }
+          
         </form>
       </div>
     )
