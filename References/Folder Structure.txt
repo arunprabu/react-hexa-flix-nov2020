@@ -1,0 +1,25 @@
+src/
+  ...
+  ...
+  ...
+  components/
+    shared/
+      Header.js 
+      Footer.js
+      Menu.js 
+    Program
+      Program.js
+    Channel/
+      Channel.js 
+    auth/
+      Login.js 
+      Signup.js
+      ReserPassword.js 
+  containers
+    ProgramList/
+      ProgramList.js 
+    ChannelList/
+      ChannelList.js 
+  hoc/
+    WithLastLogin.js
+
